@@ -2,23 +2,21 @@ package cat.aubricoc.holcost.activity;
 
 import java.util.List;
 
-import android.app.Activity;
-import android.app.AlertDialog;
+import org.holoeverywhere.app.Activity;
+import org.holoeverywhere.app.AlertDialog;
+import org.holoeverywhere.widget.Button;
+import org.holoeverywhere.widget.ListView;
+import org.holoeverywhere.widget.TextView;
+import org.holoeverywhere.widget.Toast;
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 import cat.aubricoc.holcost.R;
 import cat.aubricoc.holcost.model.Cost;
 import cat.aubricoc.holcost.model.Debt;
@@ -26,6 +24,11 @@ import cat.aubricoc.holcost.model.Dude;
 import cat.aubricoc.holcost.service.CostService;
 import cat.aubricoc.holcost.service.DebtService;
 import cat.aubricoc.holcost.service.DudeService;
+
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
+
 
 public class DudeActivity extends Activity {
 
@@ -69,6 +72,7 @@ public class DudeActivity extends Activity {
 			payedCostsList.setAdapter(new ArrayAdapter<Cost>(this,
 					R.layout.list_line, payedCosts));
 			payedCostsList.setOnItemClickListener(new OnItemClickListener() {
+				@Override
 				public void onItemClick(AdapterView<?> arg0, View arg1,
 						int position, long arg3) {
 
@@ -77,6 +81,7 @@ public class DudeActivity extends Activity {
 					intent.putExtra("costId", payedCosts.get(position).getId());
 					startActivityForResult(intent, 0);
 				}
+
 			});
 		}
 
@@ -139,7 +144,7 @@ public class DudeActivity extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getMenuInflater();
+		MenuInflater inflater = getSupportMenuInflater();
 		inflater.inflate(R.menu.dude_menu, menu);
 		return true;
 	}

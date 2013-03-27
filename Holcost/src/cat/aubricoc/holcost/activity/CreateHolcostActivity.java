@@ -1,15 +1,17 @@
 package cat.aubricoc.holcost.activity;
 
-import android.app.Activity;
+import org.holoeverywhere.app.Activity;
+import org.holoeverywhere.widget.Button;
+import org.holoeverywhere.widget.EditText;
+import org.holoeverywhere.widget.Toast;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 import cat.aubricoc.holcost.R;
 import cat.aubricoc.holcost.service.HolcostService;
+
 
 public class CreateHolcostActivity extends Activity {
 
