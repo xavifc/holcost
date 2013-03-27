@@ -17,6 +17,8 @@ import cat.aubricoc.holcost.model.Holcost;
 import cat.aubricoc.holcost.service.CostService;
 import cat.aubricoc.holcost.service.HolcostService;
 
+import com.actionbarsherlock.view.MenuItem;
+
 
 public class ListCostActivity extends Activity {
 
@@ -28,6 +30,8 @@ public class ListCostActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.list_cost);
+		
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 		final Holcost activeHolcost = holcostService.getActiveHolcost();
 		
@@ -56,4 +60,18 @@ public class ListCostActivity extends Activity {
 			startActivity(getIntent());
 		}
 	}
+	
+	@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+
+        case android.R.id.home:
+             finish();
+             break;
+
+        default:
+            return super.onOptionsItemSelected(item);
+        }
+        return false;
+    }
 }

@@ -34,7 +34,7 @@ public class CreateHolcostActivity extends Activity {
 				if (name == null || name.trim().length() == 0) {
 
 					Toast toast = Toast.makeText(CreateHolcostActivity.this,
-							getText(R.string.error_name_required), 3);
+							getText(R.string.error_name_required), Toast.LENGTH_SHORT);
 					toast.show();
 
 				} else {

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <style name="Holcost.Green" parent="Holo.Theme">
+        <item name="android:button">@style/Holcost.Green.ButtonText</item>
+    </style>
 
     <style name="TitleText">
         <item name="android:layout_width">fill_parent</item>
@@ -34,9 +38,7 @@
         <item name="android:textStyle">normal</item>
     </style>
 
-    <style name="ButtonText">
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+    <style name="Holcost.Green.ButtonText">
         <item name="android:textColor">#ffffff</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_margin">3dp</item>

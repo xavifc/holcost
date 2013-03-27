@@ -30,14 +30,16 @@
 
         <Button
             android:id="@+id/viewPayedCosts"
-            style="@style/ButtonText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/button"
             android:text="@string/view_payed_costs"
             android:visibility="gone" />
 
         <Button
             android:id="@+id/viewParticipantCosts"
-            style="@style/ButtonText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/button"
             android:text="@string/view_participant_costs"
             android:visibility="gone" />

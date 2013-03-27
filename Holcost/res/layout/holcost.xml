@@ -18,14 +18,16 @@
 
         <Button
             android:id="@+id/createCost"
-            style="@style/ButtonText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/button"
             android:text="@string/create_cost"
             android:visibility="gone" />
 
         <Button
             android:id="@+id/listCostButton"
-            style="@style/ButtonText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/button"
             android:text="@string/list_cost"
             android:visibility="gone" />

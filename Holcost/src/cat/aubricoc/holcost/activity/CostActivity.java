@@ -45,6 +45,8 @@ public class CostActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.cost);
+		
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 		Long costId = getIntent().getLongExtra("costId", -1);
 
@@ -109,7 +111,7 @@ public class CostActivity extends Activity {
 				if (name == null || name.trim().length() == 0) {
 
 					Toast toast = Toast.makeText(CostActivity.this,
-							getText(R.string.error_name_required), 3);
+							getText(R.string.error_name_required), Toast.LENGTH_SHORT);
 					toast.show();
 					return;
 				}
@@ -119,7 +121,7 @@ public class CostActivity extends Activity {
 				if (amountString == null || amountString.trim().length() == 0) {
 
 					Toast toast = Toast.makeText(CostActivity.this,
-							getText(R.string.error_amount_required), 3);
+							getText(R.string.error_amount_required), Toast.LENGTH_SHORT);
 					toast.show();
 					return;
 				}
@@ -136,7 +138,7 @@ public class CostActivity extends Activity {
 
 				if (participants.isEmpty()) {
 					Toast toast = Toast.makeText(CostActivity.this,
-							getText(R.string.error_participant_required), 3);
+							getText(R.string.error_participant_required), Toast.LENGTH_SHORT);
 					toast.show();
 					return;
 				}
@@ -195,6 +197,9 @@ public class CostActivity extends Activity {
 			alert.show();
 
 			return true;
+		case android.R.id.home:
+            finish();
+            return true;
 		default:
 			return false;
 		}

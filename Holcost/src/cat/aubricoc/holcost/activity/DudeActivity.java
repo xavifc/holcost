@@ -41,6 +41,8 @@ public class DudeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.dude);
+		
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 		Long dudeId = getIntent().getLongExtra("dudeId", -1);
 
@@ -156,7 +158,7 @@ public class DudeActivity extends Activity {
 		case R.id.deleteDudeMenu:
 			if (dudeService.dudeHavePayedCosts(dudeId)) {
 				Toast toast = Toast.makeText(this,
-						getText(R.string.error_dude_have_payed_costs), 3);
+						getText(R.string.error_dude_have_payed_costs), Toast.LENGTH_SHORT);
 				toast.show();
 				return false;
 			}

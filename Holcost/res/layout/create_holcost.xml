@@ -21,13 +21,15 @@
 
     <Button
         android:id="@+id/createHolcostButton"
-        style="@style/ButtonText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/button"
         android:text="@string/holcost_save" />
 
     <Button
         android:id="@+id/listHolcostButton"
-        style="@style/ButtonText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/button"
         android:text="@string/holcost_list"
         android:visibility="gone" />

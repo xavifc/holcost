@@ -21,7 +21,8 @@
 
     <Button
         android:id="@+id/createDudeButton"
-        style="@style/ButtonText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/button"
         android:text="@string/dude_save" />
 
